@@ -1,0 +1,145 @@
+/*-----import wal colors-----*/
+@import url("../../.cache/wal/colors-waybar.css");
+
+/*-----All styles-----*/
+* {
+    border: none;
+    font-family: Font Awesome, Roboto, Arial, sans-serif;
+    font-size: 15px;
+    color: @foreground;
+    border-radius: 20px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/*-----module groups----*/
+.modules-left {
+	background-color: @background;
+    margin: 4px 0px 0px 6px;
+}
+.modules-center {
+	background-color: @background;
+    margin: 4px 0px 0px 0px;
+}
+.modules-right {
+	background-color: @background;
+    margin: 4px 6px 0px 0px;
+}
+
+
+/*-----modules indv (in order)----*/
+#custom-power {
+    padding: 6px 20px 6px 14px;
+    background-color: @color1;
+    color: @foreground;
+}
+#custom-power:hover {
+    background-color: @color2;
+    color: @foreground;
+}
+#clock{
+    padding: 6px;
+    color: @foreground;
+    background-color: @background;
+}
+#backlight {
+    padding: 6px;
+    background-color: @background;
+    color: @foreground;
+}
+#backlight:hover {
+    background-color: @color2;
+    color: @foreground;
+}
+
+#workspaces button {
+    padding: 0px 16px;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out; /* smooth transitions */
+}
+#workspaces button:hover {
+    background-color: @color2;
+}
+#workspaces button.active {
+    background-color: @color1;
+    color: @background;
+    transition: all 0.5s ease-in-out;
+}
+#workspaces {
+    transition: all 0.5s ease-in-out;
+}
+
+
+#pulseaudio{
+    padding: 6px 6px 6px 10px;
+    color: @foreground;
+    background-color: @background;
+}
+#pulseaudio:hover {
+    background-color: @color2;
+}
+#battery{
+    padding: 6px 6px 6px 6px;
+    color: @foreground;
+    background-color: @background;
+}
+#battery:hover {
+    background-color: @color2;
+}
+#bluetooth {
+    padding: 6px;
+    color: @foreground;;
+}
+#cpu {
+    padding: 6px;
+    color: @foreground;;
+}
+#cpu:hover {
+    background-color: @color2;
+}
+#memory {
+    padding: 6px;
+    color: @foreground;;
+}
+#memory:hover {
+    background-color: @color2;
+}
+#disk {
+    padding: 6px;
+    color: @foreground;;
+}
+#disk:hover {
+    background-color: @color2;
+}
+#bluetooth:hover {
+    background-color: @color2;
+}
+
+#network {
+    padding: 6px 10px;
+    color: @foreground;
+    background-color: @background;
+    transition: background 0.2s ease;
+}
+#network:hover {
+    background-color: @color2;
+}
+#custom-media, /*?????????????*/
+
+
+
+/*-----Indicators----*/
+#pulseaudio.muted {
+    color: #ff0004;
+}
+#battery.plugged {
+    color: #00ff00;
+}
+#battery.warning:not(.plugged) {
+	color: #ffbb00;
+}
+#battery.critical:not(.plugged) {
+    color: #ff0004;
+}

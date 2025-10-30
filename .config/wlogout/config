@@ -1,0 +1,6 @@
+logout,     Logout,        hyprctl dispatch exit
+lock,       Lock,          hyprlock
+suspend,    Sleep,         systemctl suspend
+hibernate,  Hibernate,     systemctl hibernate
+reboot,     Reboot,        systemctl reboot
+shutdown,   Shutdown,      systemctl poweroff

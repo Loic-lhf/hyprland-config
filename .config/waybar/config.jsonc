@@ -1,0 +1,138 @@
+{
+// Main modules
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"custom/power",
+		"clock#1",
+		"clock#2",
+		"clock#3",
+		"backlight"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"battery",
+		"bluetooth",
+		"cpu",
+		"memory",
+		"disk",
+		"network"
+	],
+
+// Modules parameters
+	"hyprland/workspaces": {
+		"disable-scroll": false,
+		"format": "{name}"
+	},
+
+	"custom/power": {
+		"format": "",                  // Font Awesome power icon
+		"tooltip": false,
+		"on-click": "wlogout",          // <-- or use 'systemctl poweroff' / custom script
+		"on-click-right": "wlogout",    // optional right-click
+		"interval": 0
+	},
+	"clock#1": {
+		"format": "{:%a}",
+		"tooltip": false,
+		"interval": 60
+	},
+	"clock#2": {
+		"format": "{:%d/%m}",
+		"tooltip": false,
+		"interval": 60
+	},
+	"clock#3": {
+		"format": "{:%H:%M}",
+		"tooltip": false,
+		"interval": 60
+	},
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": [
+			"", "", "", "", "", "", "", "", ""
+		],
+		"on-scroll-down": "brightnessctl set +1%",
+		"on-scroll-up": "brightnessctl set 1%-"
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume:2}% ",
+		"format-muted": "",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				" ",
+				"  "
+			]
+		},
+		"on-scroll-up": "pamixer -d 5",  // ↓ Decrease volume when scrolling up
+		"on-scroll-down": "pamixer -i 5", // ↑ Increase volume when scrolling down
+		"on-click": "pamixer -t",
+		"on-click-right": "pavucontrol",
+		"tooltip": false
+	},
+//add on-click mute audio
+
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}   {capacity}%",
+		"format-charging": "  {capacity}%",
+        "format-plugged": " {capacity}%",
+		"tooltip-format": "Battery {time}",
+		"format-time": "{H}h{m}m",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"interval": 5
+	},
+
+	"bluetooth": {
+		"format": " {status}",
+		"format-connected": " {device_alias}",
+		"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+		"format-off": "󰂲 off",
+		"format-disabled": "󰂲 off",
+		"tooltip-format": "{controller_alias}\nStatus: {status}\nDevice: {device_alias}",
+		"on-click": "blueman-manager",
+		"on-click-right": "rfkill toggle bluetooth"
+	},
+	"cpu": {
+		"format": "󰍛 {usage}%",
+		"on-click": "neohtop"
+	},
+	"memory": {
+		"format": " {}%",
+		"on-click": "neohtop"
+	},
+	"disk": {
+		"format": "󰋊 {}%",
+		"on-click": "neohtop"
+	},
+	"network": {
+		"format-wifi": " ",
+		"format-ethernet": "   {ifname}",
+		"format-disconnected": "睊",
+		"tooltip-format": "{ifname} via {gwaddr}\n{ipaddr}",
+		"on-click": "nm-connection-editor",  // Open network manager GUI
+		"interval": 5
+	},
+
+	"tray": {
+		"icon-size": 10
+	}
+}
+
+// maybe change time colors when sunset

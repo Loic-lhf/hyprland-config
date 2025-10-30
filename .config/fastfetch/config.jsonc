@@ -1,0 +1,57 @@
+// {
+//   "modules": [
+//     "terminal",
+//     "terminalfont",
+//   ],
+// }
+
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/my-logo.txt"
+  },
+  "modules": [
+    "title",
+    {
+      "type": "custom",
+      "format": "╭─────────── System ───────────╮"
+    },
+    "os",
+    "host",
+    "localip",
+    "uptime",
+    {
+      "type": "custom",
+      "format": "╰──────────────────────────────╯"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭────────── Desktop ───────────╮"
+    },
+    "de",
+    "wm",
+    "theme",
+    "cursor",
+    "terminal",
+    {
+      "type": "custom",
+      "format": "╰──────────────────────────────╯"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭────────── Hardware ──────────╮"
+    },
+    "cpu",
+    "memory",
+    "display",
+    "battery",
+    {
+      "type": "custom",
+      "format": "╰──────────────────────────────╯"
+    },
+    "break",
+    "colors"
+  ]
+}
