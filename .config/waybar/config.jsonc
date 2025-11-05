@@ -30,7 +30,7 @@
 	},
 
 	"custom/power": {
-		"format": "",                  // Font Awesome power icon
+		"format": "⏻ ",                  // Font Awesome power icon
 		"tooltip": false,
 		"on-click": "wlogout",          // <-- or use 'systemctl poweroff' / custom script
 		"on-click-right": "wlogout",    // optional right-click
@@ -64,10 +64,11 @@
 		"format": "{icon} {volume:2}% ",
 		"format-muted": "",
 		"format-icons": {
-			"headphones": "",
+			"headphones": "🎧",
+			"headset": "🎧",
 			"default": [
-				" ",
-				"  "
+				"🔈",
+				"🔊"
 			]
 		},
 		"on-scroll-up": "pamixer -d 5",  // ↓ Decrease volume when scrolling up
@@ -124,7 +125,7 @@
 	"network": {
 		"format-wifi": " ",
 		"format-ethernet": "   {ifname}",
-		"format-disconnected": "睊",
+		"format-disconnected": "󰈂",
 		"tooltip-format": "{ifname} via {gwaddr}\n{ipaddr}",
 		"on-click": "nm-connection-editor",  // Open network manager GUI
 		"interval": 5

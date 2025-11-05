@@ -21,7 +21,7 @@ window#waybar {
 }
 .modules-center {
 	background-color: @background;
-    margin: 4px 0px 0px 0px;
+    margin: 4px 3px 0px 0px;
 }
 .modules-right {
 	background-color: @background;
@@ -31,7 +31,7 @@ window#waybar {
 
 /*-----modules indv (in order)----*/
 #custom-power {
-    padding: 6px 20px 6px 14px;
+    padding: 6px 8px 6px 14px;
     background-color: @color1;
     color: @foreground;
 }
@@ -135,6 +135,9 @@ window#waybar {
     color: #ff0004;
 }
 #battery.plugged {
+    color: #00ff00;
+}
+#battery.charging {
     color: #00ff00;
 }
 #battery.warning:not(.plugged) {

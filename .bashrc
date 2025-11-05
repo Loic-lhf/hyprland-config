@@ -4,7 +4,8 @@
 
 # eval "$(starship init bash)"
 
-fastfetch --logo ~/.config/fastfetch/my-logo.txt
+# fastfetch --logo ~/.config/fastfetch/my-logo.txt
+fortune | cowsay -f eyes
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

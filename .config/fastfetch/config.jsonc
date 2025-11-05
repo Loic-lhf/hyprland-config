@@ -10,47 +10,59 @@
   "logo": {
     "source": "~/.config/fastfetch/my-logo.txt"
   },
+
+  "display": {
+      "separator": ": ",     // Separator between keys and values
+      "color": {
+          "keys": "blue",    // Key color
+          "title": "red"     // Title color
+      },
+      "key": {
+          "width": 4,       // Aligns keys to this width
+          "type": "icon"   // string, icon, both, or none
+      },
+      "bar": {
+          "width": 10,       // Width of percentage bars
+          "char": {
+              "elapsed": "■", // Character for elapsed portion
+              "total": "-",    // Character for total portion
+          },
+      },
+      "percent": {
+          "type": 9,         // 1=number, 2=bar, 3=both, 9=colored number
+          "color": {
+              "green": "green",
+              "yellow": "light_yellow",
+              "red": "light_red"
+          }
+      }
+  },
+
   "modules": [
     "title",
     {
       "type": "custom",
-      "format": "╭─────────── System ───────────╮"
+      "format": "────────────────────────────────────────"
     },
     "os",
     "host",
     "localip",
     "uptime",
-    {
-      "type": "custom",
-      "format": "╰──────────────────────────────╯"
-    },
-    "break",
-    {
-      "type": "custom",
-      "format": "╭────────── Desktop ───────────╮"
-    },
     "de",
     "wm",
     "theme",
     "cursor",
     "terminal",
     {
-      "type": "custom",
-      "format": "╰──────────────────────────────╯"
+        "type": "cpu",
+        "format": "{name}"
     },
-    "break",
-    {
-      "type": "custom",
-      "format": "╭────────── Hardware ──────────╮"
-    },
-    "cpu",
     "memory",
-    "display",
-    "battery",
     {
-      "type": "custom",
-      "format": "╰──────────────────────────────╯"
+      "type": "display",
+      "format": "{width}x{height}px at {refresh-rate}Hz"
     },
+    "battery",
     "break",
     "colors"
   ]
