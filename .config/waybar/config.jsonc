@@ -116,18 +116,28 @@
 	},
 	"memory": {
 		"format": " {}%",
-		"on-click": "neohtop"
+		"on-click": "neohtop",
+		"states": {
+			"good": 5,
+			"warning": 70,
+			"critical": 85
+		},
 	},
 	"disk": {
-		"format": "󰋊 {}%",
-		"on-click": "neohtop"
+		"format": "󰋊 {percentage_used}%",
+		"on-click": "neohtop",
+		"states": {
+			"good": 5,
+			"warning": 70,
+			"critical": 85
+		},
 	},
 	"network": {
 		"format-wifi": " ",
 		"format-ethernet": "   {ifname}",
 		"format-disconnected": "󰈂",
 		"tooltip-format": "{ifname} via {gwaddr}\n{ipaddr}",
-		"on-click": "nm-connection-editor",  // Open network manager GUI
+		"on-click": "kitty -e nmtui",  // Open network manager GUI
 		"interval": 5
 	},
 

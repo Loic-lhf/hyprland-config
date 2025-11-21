@@ -146,3 +146,15 @@ window#waybar {
 #battery.critical:not(.plugged) {
     color: #ff0004;
 }
+#memory.warning {
+    color: #ffbb00;
+}
+#memory.critical {
+    color: #ff0004;
+}
+#disk.warning {
+    color: #ffbb00;
+}
+#disk.critical {
+    color: #ff0004;
+}
