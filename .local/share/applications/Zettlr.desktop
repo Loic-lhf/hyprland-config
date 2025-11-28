@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Zettlr
+Exec=/home/loic-lhf/.local/bin/Zettlr/Zettlr-3.6.0-x86_64.AppImage
+Icon=/home/loic-lhf/.local/bin/Zettlr/Zettlr.png
+Type=Application
+Categories=Utility;
+Terminal=false

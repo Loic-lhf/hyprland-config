@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Wick Editor
+Exec=/home/loic-lhf/.local/bin/Wick/Linux_Wick.Editor-1.19.0.AppImage
+Icon=/home/loic-lhf/.local/bin/Wick/wick-logo.png
+Type=Application
+Categories=Utility;
+Terminal=false

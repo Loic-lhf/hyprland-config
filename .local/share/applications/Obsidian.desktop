@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/home/loic-lhf/.local/bin/Obsidian/Obsidian-1.9.14.AppImage
+Icon=/home/loic-lhf/.local/bin/Obsidian/Obsidian.png
+Type=Application
+Categories=Utility;
+Terminal=false

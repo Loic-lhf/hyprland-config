@@ -24,9 +24,31 @@
 	],
 
 // Modules parameters
+/*	"hyprland/workspaces": {
+		"disable-scroll": false,
+		"format": "{name}",
+	},*/
+
 	"hyprland/workspaces": {
 		"disable-scroll": false,
-		"format": "{name}"
+		"format": " {name} {windows}",
+		"format-window-separator": "",
+		"window-rewrite-default": " ",
+		"window-rewrite": {
+		"class<org.mozilla.Thunderbird>": " ",
+		"class<firefox>": "󰈹 ",
+		"class<libreoffice-calc>": " ",
+		"class<libreoffice-writer>": " ",
+		"class<kitty>": "󰆍 ",
+		"class<code>": "󰨞 ",
+		"class<discord>": "󰙯 ",
+		"class<spotify>": "󰓇 ",
+		"class<org.gnome.Nautilus>": "󰉋 ",
+		"class<sublime_text>": "󰅳 ",
+		"class<obsidian>": "",
+		"class<Slack>": " ",
+		"class<Zotero>": " ",
+		}
 	},
 
 	"custom/power": {
