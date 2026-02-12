@@ -29,6 +29,8 @@
 		"format": "{name}",
 	},*/
 
+//
+
 	"hyprland/workspaces": {
 		"disable-scroll": false,
 		"format": " {name} {windows}",
@@ -36,6 +38,7 @@
 		"window-rewrite-default": " ",
 		"window-rewrite": {
 		"class<org.mozilla.Thunderbird>": " ",
+		"class<code-oss>": " ",
 		"class<firefox>": "󰈹 ",
 		"class<libreoffice-calc>": " ",
 		"class<libreoffice-writer>": " ",
@@ -48,6 +51,7 @@
 		"class<obsidian>": "",
 		"class<Slack>": " ",
 		"class<Zotero>": " ",
+		"class<rstudio>": " ",
 		}
 	},
 
@@ -86,11 +90,12 @@
 		"format": "{icon} {volume:2}% ",
 		"format-muted": "",
 		"format-icons": {
-			"headphones": "🎧",
-			"headset": "🎧",
+			"headphones": "󰋋",
+			"headset": "󰋋",
 			"default": [
-				"🔈",
-				"🔊"
+				"󰕿",
+				"󰖀",
+				"󰕾"
 			]
 		},
 		"on-scroll-up": "pamixer -d 5",  // ↓ Decrease volume when scrolling up

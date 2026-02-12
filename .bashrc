@@ -33,3 +33,18 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/loic-lhf/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/loic-lhf/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
